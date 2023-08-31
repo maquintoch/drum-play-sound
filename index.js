@@ -25,7 +25,15 @@ for (var position=0; position < numberOfButtons; position++){
 		/*let audio = new Audio('./sounds/tom-1.mp3');
 		audio.play();*/
 		let buttonInnerHTML = this.innerHTML;
-		switch	(buttonInnerHTML) {
+		
+	});
+}
+document.addEventListener("keydown", function(event){
+	console.log(event);
+});
+
+function makeSound(key){
+	switch	(buttonInnerHTML) {
 		case "w":
 			this.style.color ="yellow";
 			let audio = new Audio('./sounds/tom-1.mp3');
@@ -63,8 +71,5 @@ for (var position=0; position < numberOfButtons; position++){
 			break;
 		default:
 			console.log("Sorry, we are out for now");
-
-
 		}
-	});
 }

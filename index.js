@@ -25,15 +25,17 @@ for (var position=0; position < numberOfButtons; position++){
 		/*let audio = new Audio('./sounds/tom-1.mp3');
 		audio.play();*/
 		let buttonInnerHTML = this.innerHTML;
+		makeSound(buttonInnerHTML);
 		
 	});
 }
 document.addEventListener("keydown", function(event){
-	console.log(event);
+	//console.log(event);
+	makeSound(event.key);
 });
 
 function makeSound(key){
-	switch	(buttonInnerHTML) {
+	switch	(key) {
 		case "w":
 			this.style.color ="yellow";
 			let audio = new Audio('./sounds/tom-1.mp3');
